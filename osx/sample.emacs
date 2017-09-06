@@ -29,3 +29,9 @@
 (add-hook mode
   '(lambda ()
      (flyspell-prog-mode))))
+
+;========================================================
+; Dockerfile mode
+(add-to-list 'load-path (concat (getenv "HOME") "/Github/dockerfile-mode"))
+(require 'dockerfile-mode)
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))

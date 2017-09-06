@@ -4,10 +4,11 @@
 ; on close, save open buffers for next time
 (desktop-save-mode 1)
 
-; tabs
+; use spaces instead of tabs for Python
 (add-hook 'python-mode-hook
-  (lambda ()
-    (setq indent-tabs-mode nil)))
+  (function (lambda ()
+    (setq indent-tabs-mode nil
+          tab-width 4))))
 
 ;========================================================
 ; spell checking

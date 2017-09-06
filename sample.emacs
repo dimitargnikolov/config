@@ -6,9 +6,9 @@
 
 ; use spaces instead of tabs for Python
 (add-hook 'python-mode-hook
-  (function (lambda ()
+  (lambda ()
     (setq indent-tabs-mode nil
-          tab-width 4))))
+          tab-width 4)))
 
 ;========================================================
 ; spell checking
@@ -30,6 +30,12 @@
 (add-hook mode
   '(lambda ()
      (flyspell-prog-mode))))
+
+;========================================================
+; yaml mode
+(add-to-list 'load-path (concat (getenv "HOME") "/Github/yaml-mode"))
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("*.yml" . yaml-mode))
 
 ;========================================================
 ; Dockerfile mode

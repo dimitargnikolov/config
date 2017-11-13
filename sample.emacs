@@ -39,19 +39,19 @@
 
 ;========================================================
 ; yaml mode
-(add-to-list 'load-path (concat (getenv "HOME") "/Github/yaml-mode"))
+(add-to-list 'load-path (concat (getenv "GITHUB") "/yaml-mode"))
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("*.yml" . yaml-mode))
 
 ;========================================================
 ; Dockerfile mode
-(add-to-list 'load-path (concat (getenv "HOME") "/Github/dockerfile-mode"))
+(add-to-list 'load-path (concat (getenv "GITHUB") "/dockerfile-mode"))
 (require 'dockerfile-mode)
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
 ;========================================================
 ; Snakemake mode
-(add-to-list 'load-path (concat (getenv "HOME") "/Github/snakemake-mode"))
+(add-to-list 'load-path (concat (getenv "GITHUB") "/snakemake-mode"))
 (require 'snakemake-mode)
 
 ;========================================================

@@ -1,7 +1,7 @@
 # user paths
 export LOCAL=$HOME/Local
 export BREW=$LOCAL/apps/brew
-export ENV=$LOCAL/python-envs
+export GITHUB=$HOME/Github
 
 # library paths
 export DYLD_LIBRARY_PATH=$LOCAL/lib:$BREW/lib:$DYLD_LIBRARY_PATH

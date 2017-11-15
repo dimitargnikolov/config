@@ -25,17 +25,20 @@
 ; enable spell checking on the fly for text files only
 (setq-default flyspell-mode nil)
 
-;(dolist (hook '(text-mode-hook))
-;  (add-hook hook (lambda () (flyspell-mode 1))))
+(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
 
 ; enable spell checking on the fly in comments
-;(dolist (mode '(emacs-lisp-mode-hook
-;                python-mode-hook
-;                js-mode-hook
-;                R-mode-hook))
-;(add-hook mode
-;  '(lambda ()
-;     (flyspell-prog-mode))))
+(dolist (mode '(emacs-lisp-mode-hook
+                python-mode-hook
+                js-mode-hook
+                R-mode-hook))
+(add-hook mode
+  '(lambda ()
+     (flyspell-prog-mode))))
+
+; check the whole buffer when flyspell-mode is started
+(add-hook 'flyspell-mode-hook 'flyspell-buffer)
 
 ;========================================================
 ; yaml mode
